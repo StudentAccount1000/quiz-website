@@ -1,0 +1,42 @@
+h1, h2, h3, h4, h5, h6, p, label {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sticky {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+}
+
+.col-md-6 {
+    width: 100%;
+}
+
+.question_border {
+    border: 3px;
+    border-color: darkblue;
+    border-style: groove;
+    border-radius: 5px;
+}
+
+.question_format {
+    display: none;
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+#prev, #next, #quiz_submit {
+    margin-top: 20px;
+}
+
+#next, #quiz_submit {
+    float: right;
+}
+
+#prev {
+    float: left;
+}
+
+#quiz_submit {
+    display: none;
+}

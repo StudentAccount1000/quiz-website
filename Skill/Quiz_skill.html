@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="skill.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav class="navbar navbar-default" id="page_navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../main.html">Quiz Quest</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="../main.html">Home</a></li>
+                <li><a href="../Credits/Credits.html">Credits</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Quiz Header -->
+    <br><br><br>
+    <div class="container" >
+        <div class="row">
+            <div class="w-auto col-md-6">
+                <div id="intro">
+                    <h2 id="welcome">Welcome to a test of Skill</h2>
+                    <h3 id="desc">This quiz is primarily on HTML and JS topics related to this course.</h3>
+                    <br>
+                    <input type="button" class="btn btn-primary" id="quiz_start" value="Begin Quiz" onclick="begin_quiz()">
+                    <p>Additional details about this quiz:</p>
+                    <ul class="list-group">
+                        <li class="list-group-item">The questions are not hard coded into the HTML document</li>
+                        <li class="list-group-item">You can easily edit/add new questions in the skill.js file</li>
+                        <li class="list-group-item">The number of answer options is adjustable</li>
+                    </ul>
+                </div>
+                <div id="question_area" class="question_border question_format">
+                    <div id="question_desc"></div>
+                    <h2 id="question_num"></h2><h3 id="question"></h3><p id="instruction"></p>
+                    <div id="question_options"></div>
+                    <input type="button" class="btn btn-outline-secondary" id="prev" value="Previous" onclick="prev_question()" disabled="">
+                    <input type="button" class="btn btn-outline-secondary" id="next" value="Next" onclick="next_question()">
+                    <input type="button" class="btn btn-submit btn-success" id="quiz_submit" value="Submit Quiz" onclick="grade()">
+                </div>
+                <div id="quiz_results"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!--<script src=" https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>-->
+    <script src="skill.js"></script>
+</body>
+</html>

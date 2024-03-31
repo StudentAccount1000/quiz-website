@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Jake Watson, Project 1 CPSC 349-02 S2024 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="Reaction.css">
+
+    <title>A Test of Reaction</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default" id="page_navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../main.html">Quiz Quest</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="../main.html">Home</a></li>
+                <li><a href="../Credits/Credits.html">Credits</a></li>
+                <li><a href="#" id="Q9btn" onmousedown="checkQ9()">Red Pill</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Top of Quiz -->
+    <br><br><br>
+    <div class="container">
+        <div class="row" style="border-style: solid">
+            <div class="col-md-6">
+                <h2>Welcome to a test of Reaction</h2>
+                <p id="quiz_countdown">The quiz will begin in: 5</p>
+                <hr>
+                <div id="Q1">
+                    <h4>Question 1:</h4>
+                    <h4>Complete this Minesweeper snippet by checking all of the <b>bombs</b></h4>
+                    <div class="Q1container">
+                        <img src="assets/Q1.png" id="Q1img">
+                        <!-- 
+                            I could not get the boxes to separate with CSS no matter what I did
+                            so this part of the code isn't the prettiet. I did my best, the rest of the problems are better
+                            -->
+                        <div id="Q1checkbox" onclick="checkQ1()">
+                            <table>
+                                <tr></tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;</td><td><input type="checkbox" id="b22">&nbsp;&nbsp;&nbsp;&nbsp;</td><td><input type="checkbox" id="b23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td><input type="checkbox" id="b24"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;</td><td><input type="checkbox" id="b32"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="b41">&nbsp;&nbsp;&nbsp;</td><td><input type="checkbox" id="b42"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" id="b51">&nbsp;&nbsp;&nbsp;</td><td><input type="checkbox" id="b52"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;</td><td><input type="checkbox" id="b62"></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;</td><td><input type="checkbox" id="b72"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="Q2">
+                    <h4>Question 2:</h4>
+                    <p id="Q2question_text">Spell out 1984</p>
+                    <form><div class="form-group">
+                        <input type="text" id="Q2entry" class="form-control" placeholder="">
+                        <input type="submit" id="Q2button" class="btn-submit" onclick="checkQ2()" value="Check">
+                    </div></form>
+                </div>
+                <div id="Q3">
+                    <h4>Question 3:</h4>
+                    <p>Yes</p>
+                    <div class="form-check">
+                        <input type="radio" class="form-check-input" name="Q3group" type="radio" id="Q3O1" onclick="checkQ3()">
+                        <label class="form-check-label" for="Q3O1">Yes</label>
+                        <input type="radio" class="form-check-input" name="Q3group" type="radio" id="Q3O2">
+                        <label class="form-check-label" for="Q3O2">No</label>
+                        <div id="Q3confirm"></div>
+                    </div>
+                </div>
+                <div id="Q4">
+                    <h4>Question 4:</h4>
+                    <p>Make your window smaller than: 1000x1000 </p>
+                    <p style="display: inline-block">Question status: </p><div id="Q4status" class="status"></div>
+                    <h6>Note: must update window size, even if already smaller than 1000x000. No freebies!</h6>
+                    <p id="window_size">Current window size is: </p>
+                </div>
+                <div id="Q5">
+                    <h4>Question 5:</h4> <!-- Included link because a tester didn't remember how Roman Numerals worked -->
+                    <p>Write the <span class="pseudohref" onclick="window.open('https://en.wikipedia.org/wiki/Roman_numerals')">Roman Numeral</span> between one and twenty that has five characters</p>
+                    <form><div class="form-group">
+                        <input type="text" id="Q5entry" class="form-control" placeholder="">
+                        <input type="submit" class="btn-submit" onclick="checkQ5()" value="Check">
+                    </div></form>
+                </div>
+                <div id="Q6">
+                    <h4>Question 6:</h4>
+                    <p>Find what changed on this page and answer the question</p>
+                </div>
+                <div id="Q7">
+                    <div class="slidecontainer">
+                        <h4>Question 7:</h4>
+                        <p>Get the value of the slider to exactly 70. The distance away will update, but with a delay, so don't be too reliant on it!</p>
+                        <input type="range" class="slider" id="Q7slider" min="1" max="100" value="20">
+                        <p id="Q7slider_value">Distance from 70: 50</p>
+                      </div>
+                </div>
+                <div id="Q8">
+                    <h4>Question 8:</h4>
+                    <p style="display: inline-block">Question status: </p><div id="Q8status" class="status"></div>
+                    <p>There is an 'is' on this page which is now a mouseover event. Find it.</p>
+                    <p>Hint 1: The '<span id="Q8correct_is" onmouseover="checkQ8()">is</span>' could be part of another word, such as th<i>is</i>, and on any part of the page.</p>
+                    <div id="Q8hint_block">
+                        <input type="button" class="btn btn-outline-secondary" value="Hint 2" onclick="alert('Look in hint 1')">
+                    </div>
+                </div>
+                <div id="Q9">
+                    <h4>Question 9:</h4>
+                    <p>Find and click the red pill</p>
+                    <img src="assets/morph.jpg" id="Q9img" onmousemove="Q9event(event)" onmouseenter="Q9event(event)">
+                    <p style="display: inline-block">Question status: </p><div id="Q9status" class="status"></div>
+                    <div id="Q9hint_block">
+                        <input type="button" class="btn btn-outline-secondary" value="Hint 1" onclick="alert('`Ctrl + f` is your friend')">
+                    </div>
+                    <br>
+                </div>
+                <div id="Q10">
+                    <h4>Question 10:</h4>
+                    <p>Did you enjoy the quiz</p>
+                    <form><div class="form-check">
+                            <input type="radio" class="form-check-input" name="Q3group" type="radio" id="Q10O1">
+                            <label class="form-check-label" for="Q3O1">Yes</label>
+                            <input type="radio" class="form-check-input" name="Q3group" type="radio" id="Q10O2">
+                            <label class="form-check-label" for="Q3O2">No</label>
+                            <input type="button" class="btn btn-primary" value="Submit Quiz" onclick="checkQ10()">
+                        </div></form>
+                </div>
+                <br>
+                <div id="end">
+                    <div class="alert alert-success" role="alert" style="width: 100%">
+                        <h4 class="alert-heading">You Finished!</h4><p>Crazy how everyone liked the quiz...</p>
+                    </div>
+                    <h3 id="time"></h3>
+                    <input type="button" class="btn btn-primary" value="Return to Main Page" onclick="location.href='../main.html'">
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <script type="text/javascript" src="Reaction.js"></script>
+</body>
+</html>
+
+<!-- 
+    Ideas: 
+    Red pill/blue pill, every time you get close enough to select the button the image flips, have a red pill button in bottom right corner of screen
+-->

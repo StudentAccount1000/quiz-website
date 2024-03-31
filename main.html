@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="main.css"> <!-- Link CSS file here -->
+
+    <title>349 Proj 1 Jake Watson</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="main.html">Quiz Quest</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="main.html">Home</a></li>
+                <li><a href="Credits/Credits.html">Credits</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Top of Page -->
+    <div style="text-align: center;">
+        <H1 id="Header">Quiz Quest - CPSC 479 Project 1</H1>
+        <p>Welcome to the home page! Please select any quiz you would like from the options below</p>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="Quiz-Skill">
+                <a href="Skill/Quiz_skill.html" class="button">
+                <h2>A Test of Skill</h2>
+                <img src="assets/Skill.jpg" width="500px" height="500px"></a>
+                <p>This quiz focuses on topics related to this class, such as HTML, Javascript, and Bootstrap</p>
+                <p>Features: </p>
+                <ul class="list-group">
+                    <li class="list-group-item">Canvas-style quizzes, with next/previous style selection.</li>
+                    <li class="list-group-item">Dynamic end grade screen based on your score</li>
+                    <li class="list-group-item">Partial Credit for multiple select questions</li>
+                    <li class="list-group-item">Easily customizeable questions, answers, and question types</li>
+                    <li class="list-group-item">Supports unlimited dynamic number of answer options, and dynamic quiz length</li>
+                </ul>
+            </div>
+            <div class="col-md-6" id="Quiz-Reaction">
+                <a href="Reaction/Quiz_Reaction.html" class="button">
+                <h2>A Test of Quick Reactions</h2>
+                <img src="assets/Reaction.jpg" width="500px" height="500px"></a>
+                <p>A favorite of those who tested my application, This quiz is a more choatic but entertaining option. Be prepared to think outside the box</p>
+                <p>Features: </p>
+                <ul class="list-group">
+                    <li class="list-group-item">Quiz Countdown</li>
+                    <li class="list-group-item">Many tricks to show off cool features of HTML and Javascript</li>
+                    <li class="list-group-item">Real-World clock based quiz times</li>
+                    <li class="list-group-item">Each question reveal itself as you answer the previous question, and the previous questions get locked</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
